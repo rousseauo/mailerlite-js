@@ -14,10 +14,10 @@ Installation
 Usage
 -------
  
-Initialize a MailerLite object with your secret API Key.
+Initialize the module with your secret API Key.
 
-    var MailerLite = require('mailerlite-js');
-    var ml = new MailerLite("apiKey");
+    var ml = require('mailerlite-js');
+    ml.init("MAILERLITE_API_KEY");
     
 Now just call the methods you need like this:
 
