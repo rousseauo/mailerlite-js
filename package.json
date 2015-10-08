@@ -1,0 +1,27 @@
+{
+  "name": "mailerlite-js",
+  "version": "1.0.0",
+  "description": "NodeJS wrapper for the MailerLite API.",
+  "main": "index.js",
+  "dependencies": {
+    "https": "1.0.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rousseauo/mailerlite-js.git"
+  },
+  "keywords": [
+    "mailerlite",
+    "email",
+    "mailer"
+  ],
+  "author": "Olivier Rousseau <o_rousseau@hotmail.com> (http://cyclemapapp.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rousseauo/mailerlite-js/issues"
+  },
+  "homepage": "https://github.com/rousseauo/mailerlite-js#readme"
+}
