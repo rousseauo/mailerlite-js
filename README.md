@@ -1,31 +1,66 @@
 mailerlite-js
-=========
+=================
 A nodeJS wrapper for the MailerLite API. 
 
-##Installation##
+[MailerLite](https://www.mailerlite.com/) is an affordable solution for email marketing. 
 
-npm install mailerlite-js
+Check out the [MailerLite documentation](http://docs.mailerlite.com/) for more details about the API responses.
 
-##Usage##
-See the [MailerLite documentation](http://docs.mailerlite.com/) for more details on the API. 
+Installation
+-------
 
-Require the module
+	npm install mailerlite-js
+
+Usage
+-------
+ 
+Initialize a MailerLite object with your secret API Key.
 
     var MailerLite = require('mailerlite-js');
-
- Initialize a MailerLite object with your secret api key, and an optional api url. (Default is https://app.mailerlite.com/api/v1/)
-
     var ml = new MailerLite("apiKey");
+    
+Now just call the methods you need like this:
 
-Here is an example of how to get all the campaigns.
+	ml.campaigns.getAll(callback);
+ 
 
-	ml.campaigns.getAll(function(err, response){
-		console.log(response);
-	});
+Methods
+-------
+*Params after the callback are optional.*
 
-## Methods ##
-Listed soon...
+#### Campaigns
+- **getAll**(callback, limit, page)
+- **getDetails**(campaign_id, callback)
+- **getRecipients**(campaign_id, callback, limit, page)
+- **getOpens**(campaign_id, callback, limit, page)
+- **getClicks**(campaign_id, callback, limit, page)
+- **getUnsubscribes**(campaign_id, callback, limit, page)
+- **getBounces**(campaign_id, callback, limit, page) 
+- **getSpamComplaints**(campaign_id, callback, limit, page)
 
-## Release History##
+#### Lists
+- **getAll**(callback, limit, page)
+- **getDetails**(list_id, callback)
+- **getActiveSubscribers**(list_id, callback, limit, page)
+- **getUnsubscribers**(list_id, callback, limit, page)
+- **getBounces**(list_id, callback, limit, page)
+- **create**(list_name, callback)
+- **update**(list_id, list_name, callback) 
+- **delete**(list_id, callback)
+
+#### Subscribers
+- **addToList**(list_id, email, callback, firstName, otherFieldsArray, resubscribe)
+- **removeFromList**(list_id, email, callback)
+- **unsubscribe**(email, callback)
+- **addManyToList**(list_id, subscribers_array, callback, resubscribe)
+- **getDetails**(email, callback, history)
+- **prepareFieldsArray**(object) 
+- **prepareSubscriberObject**(object)
+
+
+
+Release History
+-------
 
 * 1.0.0 Initial release
+* 1.1.0 Complete wrapper
