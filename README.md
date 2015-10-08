@@ -62,5 +62,4 @@ Methods
 Release History
 -------
 
-* 1.0.0 Initial release
-* 1.1.0 Complete wrapper
+* 0.0.1
