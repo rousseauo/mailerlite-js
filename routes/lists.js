@@ -30,7 +30,7 @@ Lists.prototype.getDetails = function(list_id, callback) {
     httpGet(url, callback);
 };
 
-Lists.prototype.getActiveSubcribers = function(list_id, callback, limit, page) {
+Lists.prototype.getActiveSubscribers = function(list_id, callback, limit, page) {
 
     var url = this.baseURL + 'lists/' + list_id + '/active/?apiKey=' + this.apiKey ;
 
@@ -45,7 +45,7 @@ Lists.prototype.getActiveSubcribers = function(list_id, callback, limit, page) {
     httpGet(url, callback);
 };
 
-Lists.prototype.getUnsubscribes = function(list_id, callback, limit, page) {
+Lists.prototype.getUnsubscribers = function(list_id, callback, limit, page) {
 
     var url = this.baseURL + 'lists/' + list_id + '/unsubscribed/?apiKey=' + this.apiKey ;
 
