@@ -1,0 +1,9 @@
+
+
+# Dependency directory
+node_modules
+
+# Project directory
+/.idea
+
+app.js
