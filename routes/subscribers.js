@@ -35,8 +35,7 @@ Subscribers.prototype.addToList = function(list_id, email, callback, firstName, 
         path: this.apiPath + 'subscribers/' + list_id + '/',
         method: 'POST',
         headers: {
-            'Content-Type': "application/json",
-            'Content-Length': strData.length
+            'Content-Type': "application/json"
         }
     };
 
@@ -84,8 +83,7 @@ Subscribers.prototype.unsubscribe = function(email, callback) {
         path: this.apiPath + 'subscribers/unsubscribe/',
         method: 'POST',
         headers: {
-            'Content-Type': "application/json",
-            'Content-Length': strData.length
+            'Content-Type': "application/json"
         }
     };
 
@@ -114,8 +112,7 @@ Subscribers.prototype.addManyToList = function(list_id, subscribers_array, callb
         path: this.apiPath + 'subscribers/' + list_id + '/import/',
         method: 'POST',
         headers: {
-            'Content-Type': "application/json",
-            'Content-Length': strData.length
+            'Content-Type': "application/json"
         }
     };
 

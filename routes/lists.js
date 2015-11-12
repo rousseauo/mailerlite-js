@@ -91,8 +91,7 @@ Lists.prototype.create = function(list_name, callback) {
         path: this.apiPath + 'lists/',
         method: 'POST',
         headers: {
-            'Content-Type': "application/json",
-            'Content-Length': strData.length
+            'Content-Type': "application/json"
         }
     };
 
@@ -116,8 +115,7 @@ Lists.prototype.update = function(list_id, list_name, callback) {
         path: this.apiPath + 'lists/' + list_id + '/',
         method: 'PUT',
         headers: {
-            'Content-Type': "application/json",
-            'Content-Length': strData.length
+            'Content-Type': "application/json"
         }
     };
 
