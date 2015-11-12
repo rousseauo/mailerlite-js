@@ -35,7 +35,8 @@ Subscribers.prototype.addToList = function(list_id, email, callback, firstName, 
         path: this.apiPath + 'subscribers/' + list_id + '/',
         method: 'POST',
         headers: {
-            'Content-Type': "application/json"
+            'Content-Type': "application/json",
+            'Content-Length': Buffer.byteLength(strData, 'utf8')
         }
     };
 
@@ -60,7 +61,7 @@ Subscribers.prototype.removeFromList = function(list_id, email, callback) {
         method: 'DELETE',
         headers: {
             'Content-Type': "application/json",
-            'Content-Length': strData.length
+            'Content-Length': Buffer.byteLength(strData, 'utf8')
         }
     };
 
@@ -83,7 +84,8 @@ Subscribers.prototype.unsubscribe = function(email, callback) {
         path: this.apiPath + 'subscribers/unsubscribe/',
         method: 'POST',
         headers: {
-            'Content-Type': "application/json"
+            'Content-Type': "application/json",
+            'Content-Length': Buffer.byteLength(strData, 'utf8')
         }
     };
 
@@ -112,7 +114,8 @@ Subscribers.prototype.addManyToList = function(list_id, subscribers_array, callb
         path: this.apiPath + 'subscribers/' + list_id + '/import/',
         method: 'POST',
         headers: {
-            'Content-Type': "application/json"
+            'Content-Type': "application/json",
+            'Content-Length': Buffer.byteLength(strData, 'utf8')
         }
     };
 

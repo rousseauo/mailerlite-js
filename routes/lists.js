@@ -91,7 +91,8 @@ Lists.prototype.create = function(list_name, callback) {
         path: this.apiPath + 'lists/',
         method: 'POST',
         headers: {
-            'Content-Type': "application/json"
+            'Content-Type': "application/json",
+            'Content-Length': Buffer.byteLength(strData, 'utf8')
         }
     };
 
@@ -115,7 +116,8 @@ Lists.prototype.update = function(list_id, list_name, callback) {
         path: this.apiPath + 'lists/' + list_id + '/',
         method: 'PUT',
         headers: {
-            'Content-Type': "application/json"
+            'Content-Type': "application/json",
+            'Content-Length': Buffer.byteLength(strData, 'utf8')
         }
     };
 
@@ -139,7 +141,7 @@ Lists.prototype.delete = function(list_id, callback) {
         method: 'DELETE',
         headers: {
             'Content-Type': "application/json",
-            'Content-Length': strData.length
+            'Content-Length': Buffer.byteLength(strData, 'utf8')
         }
     };
 
